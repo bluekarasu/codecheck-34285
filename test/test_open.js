@@ -6,8 +6,7 @@ describe('Creative Engineer Exam #1 (Open Tests)', () => {
 	it('Case #1 should be caluculated', () => co(function*() {
 		const input = [
 			'2017/02',
-			'2017/02/01 08:00-12:00 13:00-16:00',
-			''
+			'2017/02/01 08:00-12:00 13:00-16:00'
 		];
 		const expected = [
 			'0', '0', '0', '0', '0'
