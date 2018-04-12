@@ -8,7 +8,7 @@ ROOT=$(cd $(dirname $0) && pwd)
 ### Scala ###
 # java -jar $(ls $ROOT/scala/target/ce-exam-*-jar-with-dependencies.jar) "$@"
 
-python $ROOT/python/src/main.py
+python $ROOT/python/src/main.pyc "$@"
 
 ### NodeJS ###
 # node $ROOT/nodejs/src/main.js "$@"
