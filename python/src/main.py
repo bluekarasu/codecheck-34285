@@ -125,14 +125,15 @@ def main():
         print late_night/60
     else:
         print late_night/60+1
-    if holiday_statutory%60<30:
-        print holiday_statutory/60
-    else:
-        print holiday_statutory/60+1
     if holiday_prescribed%60<30:
         print holiday_prescribed/60
     else:
         print holiday_prescribed+1
+    if holiday_statutory%60<30:
+        print holiday_statutory/60
+    else:
+        print holiday_statutory/60+1
+
 
 if __name__=="__main__":
     code=0                           #exit code
@@ -147,4 +148,3 @@ if __name__=="__main__":
         agg_weeknumb=datetime(agg_year,agg_month,1).isocalendar()[1]
         agg_daynumb=datetime(agg_year,agg_month,1).isocalendar()[2]
         main()
-
