@@ -27,7 +27,8 @@ def main():
         except:
             code=1                   #if incorrect input data is passed,the program returns 1
             pass
-
+        if code==1:
+            break
         #check whether its new week or same week
         #if its new week(reset=1),reset week working hours summary
         if target_date.isocalendar()[1]==target_week:
