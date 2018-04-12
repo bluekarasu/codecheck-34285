@@ -108,7 +108,7 @@ def main():
             elif week_summary>2400:
                 statutory_excess+=week_summary-2400
         day_summary=0
-        print "forbun"
+        
 
 
     ###################### for ###################
