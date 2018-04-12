@@ -1,6 +1,5 @@
 from datetime import datetime
 from datetime import timedelta
-
 def iso_to_gregorian(iso_year,iso_week,iso_day):
     fourth_jan_week=datetime(iso_year,1,4).isocalendar()[1]
     fourth_jan_day=datetime(iso_year,1,4).isocalendar()[2]
@@ -8,6 +7,7 @@ def iso_to_gregorian(iso_year,iso_week,iso_day):
 
 def main():
     i=0
+    l=0
     code=0                      #used to check input(correct types of input or incorrect types of input)
     reset=0                     #used to check whether its new week or same week
     target_week=0               #used to check whether its new week or same week)
@@ -18,9 +18,9 @@ def main():
     late_night=0                #3.Late-night overtime working hours
     holiday_prescribed=0        #4.Working hours on prescribed holiday
     holiday_statutory=0         #5.Working hours on statutory holiday
-    if_input=True
-    while code==0:
-        input=raw_input().split()
+    fir_input=raw_input().split('\\n')
+    for l in range(len(fir_input)):
+        input=fir_input[l].split()
         try:
             target_date=datetime.strptime(input[0],"%Y/%m/%d")
             code=0
@@ -74,6 +74,7 @@ def main():
             work_minutes=(second[0]-first[0])*60+(second[1]-first[1])
             day_summary+=work_minutes
 
+        ###################### for #############################
         #if the day is sunday or saturday or weekdays change the process
         week_summary+=day_summary
 
@@ -107,7 +108,10 @@ def main():
             elif week_summary>2400:
                 statutory_excess+=week_summary-2400
         day_summary=0
+        print "forbun"
 
+
+    ###################### for ###################
     #printing outputs
     #1.overtime within statutory working hours
     #2.overtime in a excess of statutory working hours
