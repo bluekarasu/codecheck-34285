@@ -135,18 +135,6 @@ describe('Creative Engineer Exam #1 (Open Tests)', () => {
 		const actual1 = yield run('./run.sh', [], input1.join('\n'));
 		expect(actual1).toEqual(expected1);
 
-		const input2 = [
-			'2017/01',
-			'2017/01/16 08:00-12:00 13:00-18:00',
-			'2017/01/17 08:00-12:00 13:00-18:00',
-			'2017/01/18 08:00-12:00 13:00-18:00',
-			'2017/01/19 08:00-12:00 13:00-17:00',
-			'2017/01/20 08:00-12:00 13:00-21:00'
-		];
-		const expected2 = [
-			'4', '10', '0', '0', '0'
-		];
-		const actual2 = yield run('./run.sh', [], input2.join('\n'));
-		expect(actual2).toEqual(expected2);
+		
 	}));
 });
